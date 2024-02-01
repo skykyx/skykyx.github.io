@@ -1,1 +1,33 @@
 <title>Night</title><iframe src="https://z1.m1907.top?jx=" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>影视记录</title>
+  <script>
+    // 定义一个空数组来存储电影记录
+    let movieRecords = [];
+
+    // 定义一个函数来添加观看记录
+    function addMovieRecord(title, watchedDate) {
+      // 将记录添加到数组中
+      movieRecords.push({ title, watchedDate });
+      
+      // 更新显示记录的元素内容
+      document.getElementById("movie-records").innerHTML = "电影记录：\n";
+      movieRecords.forEach((record) => {
+        document.getElementById("movie-records").innerHTML += `电影名称: ${record.title}, 观看日期: ${record.watchedDate}\n`;
+      });
+    }
+
+    // 初始化页面，显示一条示例记录
+    window.onload = function() {
+      addMovieRecord("阿甘正传", "2023-07-01");
+    }
+  </script>
+</head>
+<body>
+  <h1>影视记录</h1>
+  <p id="movie-records"></p>
+  <button onclick="addMovieRecord('泰坦尼克号', '2023-06-25')">添加记录</button>
+</body>
+</html>
