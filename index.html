@@ -6,9 +6,9 @@
     <title>Night</title>
     <script>
         function fetchAndShowRecords() {
-            fetch('https://z1.m1907.top?jx=')  // 替换为您的后端服务地址
-                .then(response => response.json())
-                .then(data => {
+            fetch('https://im1907.top/qwq/')  // 替换为您的后端服务地址
+                。then(response => response.json())
+                。then(data => {
                     const modal = document.getElementById('recordModal');
                     modal.innerHTML = '';  // 清空模态窗口内容
                     data.forEach(record => {
@@ -17,7 +17,7 @@
                         modal.appendChild(listItem);
                     });
                 })
-                .catch(error => console.error('Error:', error));
+                。catch(error => console.error('Error:', error));
         }
 
         // 当页面加载完成后，调用函数获取记录并显示
